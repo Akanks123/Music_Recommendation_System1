@@ -13,7 +13,6 @@ file_path = "df.pkl"
 # Open the file in write-binary mode and save the data
 with open(file_path, "wb") as file:
     pickle.dump(data, file)
-
     
 
 print(f"Pickle file '{file_path}' created successfully!")
