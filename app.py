@@ -90,3 +90,15 @@ if option == "By Song":
                     st.markdown(f"[▶️ Play on Spotify]({recommended_music_links[i]})")
 
 
+elif option == "By Artist":
+    artist_name = st.text_input("Enter Artist Name")
+
+    if st.button('Show Recommendation'):
+        recommended_music_names, recommended_music_posters, recommended_music_links = recommend_by_artist(artist_name)
+        
+        if recommended_music_names:
+            cols = st.columns(5)
+            for i in range(len(recommended_music_names)):
+                with cols[i % 5]:
+                    st.image(recommended_music_posters[i], caption=recommended_music_names[i])
+                    st.markdown(f"[▶️ Play on Spotify]({recommended_music_links[i]})")
