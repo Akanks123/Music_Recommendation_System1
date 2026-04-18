@@ -102,3 +102,4 @@ elif option == "By Artist":
                 with cols[i % 5]:
                     st.image(recommended_music_posters[i], caption=recommended_music_names[i])
                     st.markdown(f"[▶️ Play on Spotify]({recommended_music_links[i]})")
+
